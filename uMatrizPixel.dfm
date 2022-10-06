@@ -59,11 +59,10 @@ object frmMatrizPixel: TfrmMatrizPixel
       object lblTamanhoPixel: TLabel
         Left = 0
         Top = 0
-        Width = 164
+        Width = 69
         Height = 13
         Align = alTop
         Caption = 'Tamanho Pixel'
-        ExplicitWidth = 69
       end
       object edtTamanhoPixel: TEdit
         Left = 0
@@ -108,11 +107,10 @@ object frmMatrizPixel: TfrmMatrizPixel
       object lblTamanhoCirculo: TLabel
         Left = 0
         Top = 0
-        Width = 164
+        Width = 21
         Height = 13
         Align = alTop
         Caption = 'Raio'
-        ExplicitWidth = 21
       end
       object btnCirculoCriar: TSpeedButton
         AlignWithMargins = True
@@ -169,11 +167,10 @@ object frmMatrizPixel: TfrmMatrizPixel
         object lblPixel: TLabel
           Left = 0
           Top = 0
-          Width = 164
+          Width = 22
           Height = 13
           Align = alTop
           Caption = 'Pixel'
-          ExplicitWidth = 22
         end
         object gpPixelXY: TGridPanel
           Left = 0

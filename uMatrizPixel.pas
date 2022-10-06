@@ -610,22 +610,15 @@ procedure TDesenho.LinhaDDA(Canvas: TCanvas; PontoInicial, PontoFinal: TPonto; T
 var dx, dy, x, y, XInicial, YInicial, XFinal, YFinal: Integer;
     XYInvertido: Boolean;
 begin
-  // Onde inverte a linha x1 > x2
-  XInicial := PontoInicial.X;
-  XFinal := PontoFinal.X;
-
-  YInicial := PontoInicial.Y;
-  YFinal := PontoFinal.Y;
-
-  if (XFinal > XInicial) then
-    dx := XFinal - XInicial
+  if (PontoFinal.X > PontoInicial.X) then
+    dx := PontoFinal.X - PontoInicial.X
   else
-    dx := XInicial - XFinal;
+    dx := PontoInicial.X - PontoFinal.X;
 
-  if (YFinal > YInicial) then
-    dy := YFinal - YInicial
+  if (PontoFinal.Y > PontoInicial.Y) then
+    dy := PontoFinal.Y - PontoInicial.Y
   else
-    dy := YInicial - YFinal;
+    dy := PontoInicial.Y - PontoFinal.Y;
 
   if dx > dy then
   begin
@@ -668,12 +661,9 @@ begin
 	dx := XFinal - XInicial;
 	dy := YFinal - YInicial;
 
-//  Y := YInicial;
-
   for X := XInicial to XFinal do
   begin
-    Y := Trunc(YInicial + (x - XInicial) * (dy / dx));
-    //Y + (Y * dy / dx));
+    Y := YInicial + Round((x - XInicial) * (dy / dx));
 
     if (XYInvertido) then
       PintarPixel(Canvas, Y, X, TamanhoPixel, Marcado)
