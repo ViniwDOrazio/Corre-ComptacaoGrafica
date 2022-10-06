@@ -1,4 +1,4 @@
-program CorreComptacaoGrafica;
+program CorrePrimitivasGraficas;
 
 uses
   Vcl.Forms,
@@ -9,6 +9,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.Title := 'Primitivas Gráficas';
   Application.CreateForm(TfrmMatrizPixel, frmMatrizPixel);
   Application.Run;
 end.

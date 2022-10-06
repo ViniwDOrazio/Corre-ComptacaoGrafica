@@ -1,7 +1,7 @@
 object frmMatrizPixel: TfrmMatrizPixel
   Left = 0
   Top = 0
-  Caption = 'Tela Pixelada'
+  Caption = 'Primitivas Gr'#225'ficas'
   ClientHeight = 432
   ClientWidth = 724
   Color = clBtnFace
@@ -406,8 +406,6 @@ object frmMatrizPixel: TfrmMatrizPixel
     Visible = False
     OnClick = lstDesenhosClick
     OnKeyUp = lstDesenhosKeyUp
-    ExplicitLeft = 320
-    ExplicitTop = -8
   end
   object tmrPintar: TTimer
     Interval = 20
