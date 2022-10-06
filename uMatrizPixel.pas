@@ -75,6 +75,11 @@ type
     edtRaio: TEdit;
     pControladorPadrao: TPanel;
     btnCirculoCriar: TSpeedButton;
+    chkPassoAPasso: TCheckBox;
+    pPassoPasso: TPanel;
+    btnTerminar: TSpeedButton;
+    btnAnterior: TSpeedButton;
+    btnProximo: TSpeedButton;
     procedure FormPaint(Sender: TObject);
     procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure FormMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
@@ -354,6 +359,7 @@ end;
 procedure TfrmMatrizPixel.FormResize(Sender: TObject);
 begin
   ChamarPaint;
+  pPassoPasso.Left := Trunc(Width / 2) - Trunc(pPassoPasso.Width / 2);
 end;
 
 procedure TfrmMatrizPixel.lstDesenhosClick(Sender: TObject);

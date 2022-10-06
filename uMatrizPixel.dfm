@@ -38,7 +38,7 @@ object frmMatrizPixel: TfrmMatrizPixel
     Left = 220
     Top = 0
     Width = 174
-    Height = 127
+    Height = 147
     Anchors = [akRight, akBottom]
     ParentBackground = False
     TabOrder = 0
@@ -46,7 +46,7 @@ object frmMatrizPixel: TfrmMatrizPixel
     object pnlTamanhoPixel: TPanel
       AlignWithMargins = True
       Left = 5
-      Top = 26
+      Top = 47
       Width = 164
       Height = 34
       Margins.Left = 4
@@ -56,6 +56,7 @@ object frmMatrizPixel: TfrmMatrizPixel
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitTop = 26
       object lblTamanhoPixel: TLabel
         Left = 0
         Top = 0
@@ -79,7 +80,7 @@ object frmMatrizPixel: TfrmMatrizPixel
     object chkMostrarCordenadas: TCheckBox
       AlignWithMargins = True
       Left = 5
-      Top = 5
+      Top = 26
       Width = 164
       Height = 17
       Margins.Left = 4
@@ -90,11 +91,13 @@ object frmMatrizPixel: TfrmMatrizPixel
       Caption = 'Mostrar Cordenadas'
       TabOrder = 0
       OnClick = chkMostrarCordenadasClick
+      ExplicitLeft = 1
+      ExplicitTop = 6
     end
     object pTamanhoCirculo: TPanel
       AlignWithMargins = True
       Left = 5
-      Top = 153
+      Top = 174
       Width = 164
       Height = 56
       Margins.Left = 4
@@ -105,6 +108,7 @@ object frmMatrizPixel: TfrmMatrizPixel
       BevelOuter = bvNone
       TabOrder = 2
       Visible = False
+      ExplicitTop = 153
       object lblTamanhoCirculo: TLabel
         Left = 0
         Top = 0
@@ -147,12 +151,13 @@ object frmMatrizPixel: TfrmMatrizPixel
     end
     object pControladorPadrao: TPanel
       Left = 1
-      Top = 60
+      Top = 81
       Width = 172
       Height = 89
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 3
+      ExplicitTop = 60
       object pPixel: TPanel
         AlignWithMargins = True
         Left = 4
@@ -394,6 +399,23 @@ object frmMatrizPixel: TfrmMatrizPixel
         end
       end
     end
+    object chkPassoAPasso: TCheckBox
+      AlignWithMargins = True
+      Left = 5
+      Top = 5
+      Width = 164
+      Height = 17
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 0
+      Align = alTop
+      Caption = 'Passo a passo'
+      TabOrder = 4
+      OnClick = chkMostrarCordenadasClick
+      ExplicitLeft = 1
+      ExplicitTop = 6
+    end
   end
   object lstDesenhos: TListBox
     Left = 0
@@ -406,8 +428,44 @@ object frmMatrizPixel: TfrmMatrizPixel
     Visible = False
     OnClick = lstDesenhosClick
     OnKeyUp = lstDesenhosKeyUp
-    ExplicitLeft = 320
-    ExplicitTop = -8
+  end
+  object pPassoPasso: TPanel
+    Left = 336
+    Top = 402
+    Width = 113
+    Height = 22
+    Anchors = [akLeft, akBottom]
+    TabOrder = 2
+    Visible = False
+    object btnTerminar: TSpeedButton
+      Left = 24
+      Top = 1
+      Width = 65
+      Height = 20
+      Align = alClient
+      Caption = 'Terminar'
+      ExplicitLeft = 18
+    end
+    object btnAnterior: TSpeedButton
+      Left = 1
+      Top = 1
+      Width = 23
+      Height = 20
+      Align = alLeft
+      Caption = '<'
+      ExplicitLeft = -5
+    end
+    object btnProximo: TSpeedButton
+      Left = 89
+      Top = 1
+      Width = 23
+      Height = 20
+      Align = alRight
+      Caption = '>'
+      ExplicitLeft = 48
+      ExplicitTop = 8
+      ExplicitHeight = 22
+    end
   end
   object tmrPintar: TTimer
     Interval = 20
