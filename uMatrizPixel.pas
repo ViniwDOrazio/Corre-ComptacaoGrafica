@@ -479,7 +479,7 @@ begin
 end;
 
 function TDesenho.getDescricao: String;
-const DescricaoBase: array [TTipoDesenho] of String = ('Ponto', 'LinhaDDA', 'BresenhamLinha', 'Circulo');
+const DescricaoBase: array [TTipoDesenho] of String = ('Ponto', 'Linha DDA', 'Linha Bresenham', 'Circulo');
 var Ponto: TPonto;
 begin
   Result := DescricaoBase[FTipoDesenho];
